@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #191970, #6666ff); /* Dark blue to light pink gradient */
+      min-height: 100vh;
+      color: white;
+    }
+
+    .navbar {
+      background-color: #001f3f; /* Midnight blue background for navbar */
+      border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    }
+
+    .navbar-brand {
+      font-weight: bold; /* Bold font for the navbar brand */
+      color: #ffcc00; /* Gold color for contrast */
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffcc00; /* Gold color for nav links */
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffd700; /* Lighter gold on hover */
+    }
+
+    .container {
+      width: 600px; /* Fixed width for the container */
+      background: rgba(46, 43, 53, 0.9); /* Darker semi-transparent background for the container */
+      padding: 30px;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+      margin: 20px auto; /* Center the container */
+    }
+
+    .results {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .danger {
+      color: #ff4d4d; /* Red for spam message */
+    }
+
+    .safe {
+      color: #66ff66; /* Green for not spam message */
+    }
+
+    .footer {
+      text-align: center;
+      margin: 20px 0; /* Margin above and below footer */
+      color: #ffcc00; /* Gold color for footer text */
+      padding: 10px; /* Padding for the footer */
+    }
+
+    .footer-description {
+      font-size: 14px; /* Smaller font size for footer */
+    }
+  </style>
+
+  <title>Email Spam Classifier</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SPAM Deactivate</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Mohymin.DK</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Show -->
+  <div class="container mt-5">
+    <h1>Email Spam Classifier's Result Shown Below</h1>
+    <p>Turning clutter into clarity</p>
+    <a href="/">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Home</button>
+    </a>
+  </div>
+
+  <!-- Result -->
+  <div class="results">
+    {% if prediction==1 %}
+    <h1>Prediction: <span class='danger'>This is a SPAM message.</span></h1>
+    
+    <img class="gif" src="{{ url_for('static', filename='ALT.gif') }}" alt="SPAM Image">
+    {% elif prediction==0 %}
+    <h1>Prediction: <span class='safe'>This is NOT a spam message.</span></h1>
+    <img class="gif" src="{{ url_for('static', filename='NSPM.gif') }}" alt="Not a spam image">
+    {% endif %}
+  </div>
+
+<!-- Footer -->
+<div class='footer'>
+
+  <p class='footer-description'>By: Mohymin.DK</p>
+</div>
+
+  
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-LKX8G2N5t5D/0Tp

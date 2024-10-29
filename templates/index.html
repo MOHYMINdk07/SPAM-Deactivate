@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <!-- Custom CSS for Dark Gradient Background -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #191970, #6666ff); /* Dark blue to light pink gradient */
+      min-height: 100vh;
+      color: rgb(12, 13, 66);
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background for navbar */
+      border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    }
+
+    .navbar-brand {
+      font-weight: bold; /* Bold font for the navbar brand */
+      color: #ada37a; /* Gold color for contrast */
+    }
+
+    .container {
+      background: rgba(46, 43, 53, 0.9); /* Darker semi-transparent background for the container */
+      padding: 30px;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 5px px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    }
+
+    h2 {
+      color: #ffcc00; /* Gold color for the heading */
+    }
+
+    .form-control {
+      border-radius: 5px; /* Rounded corners for the textarea */
+    }
+
+    .btn-primary {
+      background-color: #ffcc00; /* Gold background for button */
+      border-color: #ffcc00; /* Matching border color */
+      color: black; /* Change button text color to black */
+    }
+
+    .btn-primary:hover {
+      background-color: #ffd700; /* Slightly lighter on hover */
+    }
+  </style>
+
+  <title>Spam Deactivate</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SPAM Deactivate</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mohymin.DK</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Input form -->
+  <div class="container mt-5">
+    <h2 class="text-center mt-3">Enter your email</h2>
+
+    <form action="/" method="POST">
+      <div class="form-floating mt-3">
+        <textarea class="form-control" placeholder="Write your mail here.." id="email" name="email" style="height: 100px"></textarea>
+        <label for="email">Write your email here...</label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary mt-3">Predict</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-LKX8G2N5t5D/0TpO0Y0lAsa8WgH65G+G3p1fue1h9EGh2U5xMT6uK6WvIkTlb9E7" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-vqczjUsfhA6fq3O3u7k76mJzz9SmR7U7bxlYOFXoJ0D7A0aVlfOM1oLPTi7j+L2L" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
