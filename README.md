@@ -40,6 +40,24 @@ The Spam Detection Web Application is designed to classify emails as spam or not
 
 
 ## Demo
-<h3>Landing page</h3>
+> Landing page
+
+
+
 ![Home](https://github.com/user-attachments/assets/2759415c-872b-48ee-aff5-6efc7593c62c)
 
+
+> If mail is Not-spam
+
+
+
+![not spam](https://github.com/user-attachments/assets/e9b070e4-28a8-43a3-906c-02b461205d00)
+
+
+
+> If mail is Spam
+
+
+
+
+![spam](https://github.com/user-attachments/assets/a04c38aa-f51f-4a70-931e-ab5a6bf6c981)
